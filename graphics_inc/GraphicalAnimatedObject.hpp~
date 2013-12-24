@@ -1,0 +1,14 @@
+#ifndef 		_GRAPHICALANIMATEDOBJECT_H_
+#define 		_GRAPHICALANIMATEDOBJECT_H_
+
+#include                <iostream>
+#include                <string>
+#include                <SFML/Graphics.hpp>
+
+#include		"GraphicalObject.hpp"
+
+using namespace         std;
+using namespace         sf;
+
+class GraphicalAnimatedObject
+#endif /* _GRAPHICALANIMATEDOBJECT_H_ */
