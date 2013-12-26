@@ -5,14 +5,12 @@
 // Contact   <cataldo.nico@gmail.com>
 // 
 // Started on  Tue Dec 24 10:27:30 2013 Nicolas Cataldo
-// Last update Tue Dec 24 10:40:14 2013 Nicolas Cataldo
+// Last update Wed Dec 25 21:18:47 2013 Nicolas Cataldo
 //
 
 #ifndef 		_GRAPHICALANIMATEDOBJECT_H_
 #define 		_GRAPHICALANIMATEDOBJECT_H_
 
-#include                <iostream>
-#include                <string>
 #include                <SFML/Graphics.hpp>
 
 #include		"GraphicalObject.hpp"
@@ -23,13 +21,16 @@ using namespace         sf;
 class GraphicalAnimatedObject : public GraphicalObject
 {
 public:
-  GraphicalAnimatedObject();
+  GraphicalAnimatedObject(String name
+			  , e_GobjectType type
+			  ,int xInterval
+			  ,int yInterval);
   virtual ~GraphicalAnimatedObject();
 
 protected:
-  int			positionAnimation;
-  int			xInterval;
-  int			yInterval;
+  int			_positionAnimation;
+  int			_xInterval;
+  int			_yInterval;
 };
 
   

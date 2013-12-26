@@ -13,6 +13,8 @@ GraphicalObject::GraphicalObject(String name, e_GobjectType type)
     stringTypeObj = "SkillsButton";
   else if(type == MENU)
     stringTypeObj = "Menu";
+  else if(type == CHAR)
+    stringTypeObj = "CharSheet";
 
   textureLink = "res/Sprite/" + stringTypeObj + "/" + name + ".png";
 
@@ -25,3 +27,8 @@ GraphicalObject::GraphicalObject(String name, e_GobjectType type)
 };
 
 GraphicalObject::~GraphicalObject(){};
+
+Sprite*			GraphicalObject::getSprite()
+{
+  return &_sprite;
+};

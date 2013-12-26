@@ -5,7 +5,7 @@
 // Contact   <cataldo.nico@gmail.com>
 // 
 // Started on  Tue Dec 24 10:27:42 2013 Nicolas Cataldo
-// Last update Tue Dec 24 10:27:43 2013 Nicolas Cataldo
+// Last update Wed Dec 25 21:41:11 2013 Nicolas Cataldo
 //
 
 
@@ -16,13 +16,14 @@
 #include		<string>
 #include		<SFML/Graphics.hpp>
 
-using namespace         std;
-using namespace         sf;
+using namespace std;
+using namespace sf;
 
 enum GobjectType { 	ITEM
 		   	,BUTTON
 		   	,SKILLBUTTON
 		   	,MENU 
+			,CHAR
 };
 typedef enum GobjectType e_GobjectType;
 
@@ -32,6 +33,7 @@ public:
   GraphicalObject(String name, e_GobjectType type);
   virtual ~GraphicalObject();
 
+  Sprite*		getSprite();
 protected:
   String		_name;
   Texture		_texture;

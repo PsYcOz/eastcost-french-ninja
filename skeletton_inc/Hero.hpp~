@@ -1,0 +1,21 @@
+//
+// Hero.hpp for noName in /home/mjolnir
+// 
+// Made by Nicolas Cataldo
+// Contact   <cataldo.nico@gmail.com>
+// 
+// Started on  Wed Dec 25 19:39:41 2013 Nicolas Cataldo
+// Last update Wed Dec 25 19:40:49 2013 Nicolas Cataldo
+//
+
+#ifndef _HERO_H_
+#define _HERO_H_
+
+class Hero : public 
+{
+public:
+  Hero();
+  virtual ~Hero();
+};
+
+#endif /* _HERO_H_ */

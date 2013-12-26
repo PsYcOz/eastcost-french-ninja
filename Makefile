@@ -58,7 +58,7 @@ LDFLAGSHANDLER	= -L $(SFMLEXTLIB) -Wl,-rpath,$(SFMLEXTLIB) \
 
 
 LDFLAGSSKEL	= -L $(SFMLEXTLIB) -Wl,-rpath,$(SFMLEXTLIB) \
-		  -lsfml-system -lsfml-graphics -lsfml-window \ \
+		  -lsfml-system -lsfml-graphics -lsfml-window \
 		  -I $(DIRSKELETTONINC) \
 		  -I $(DIRGRAPHICSINC) \
 		  -I $(SFMLINCLUDE) 
@@ -89,11 +89,12 @@ NOCOLOR		= "\\033[0\;0m"
 
 ECHO		= /bin/echo -e
 
-HANDLERSRC	= $(DIRHANDLERSRC)main.cpp \
+HANDLERSRC	= $(DIRHANDLERSRC)main.cpp
 
 GRAPHSRC	= $(DIRGRAPHICSSRC)GraphicalObject.cpp \
+		  $(DIRGRAPHICSSRC)GraphicalAnimatedObject.cpp
 
-SKELSRC 	= 
+SKELSRC 	= $(DIRSKELETTONSRC)Hero.cpp
 
 SOUNDSSRC	= 
 
