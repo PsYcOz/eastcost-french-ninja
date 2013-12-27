@@ -5,7 +5,7 @@
 // Contact   <cataldo.nico@gmail.com>
 // 
 // Started on  Wed Dec 25 19:39:41 2013 Nicolas Cataldo
-// Last update Wed Dec 25 20:20:51 2013 Nicolas Cataldo
+// Last update Thu Dec 26 11:57:47 2013 Nicolas Cataldo
 //
 
 #ifndef 		_HERO_H_
@@ -18,7 +18,8 @@ class Hero : public GraphicalAnimatedObject
 public:
   Hero();
   virtual ~Hero();
-  
+
+  void 			moveHero(e_mvtDirection dir);  
 protected:
   int			_hp;
   int			_kakari;

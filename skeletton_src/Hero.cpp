@@ -1,11 +1,11 @@
 //
-// Hero.cpp<2> for noName in /home/mjolnir
+// Hero.cpp for noName in /home/mjolnir
 // 
 // Made by Nicolas Cataldo
 // Contact   <cataldo.nico@gmail.com>
 // 
 // Started on  Wed Dec 25 20:03:26 2013 Nicolas Cataldo
-// Last update Wed Dec 25 20:46:10 2013 Nicolas Cataldo
+// Last update Thu Dec 26 12:46:11 2013 Nicolas Cataldo
 //
 #include		"Hero.hpp"
 
@@ -26,3 +26,29 @@ Hero::Hero() : GraphicalAnimatedObject("Hero", CHAR, 71, 61)
 };
 
 Hero::~Hero(){};
+
+void 			Hero::moveHero(e_mvtDirection dir)
+{
+  _positionAnimation++;
+
+  if(_positionAnimation == 9)
+    {
+      _positionAnimation = 0;
+      _xInterval = 0;
+    }
+
+  if(_positionAnimation%2 == 0)
+    {
+      _xInterval += 71;
+      if(dir == RIGHT)
+	{
+	  _sprite.move(15, 0);
+	  _sprite.setTextureRect(IntRect(_xInterval, _yInterval, 71, 61));
+	}
+      else if(dir == LEFT)
+	{
+	  _sprite.move(-15, 0);
+	  _sprite.setTextureRect(IntRect(_xInterval, _yInterval, -71, 61));
+	}
+    }
+};
